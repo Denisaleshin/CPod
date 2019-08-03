@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/Denisaleshin/CPod"
   s.source = { :git => "https://github.com/Denisaleshin/CPod.git", :tag => "#{s.version}" }
   s.framework = "Foundation"
-  s.source_files = "Classes/*.swift"
+  s.source_files = "*.swift"
   s.swift_version = "5"
 
  end
