@@ -35,16 +35,6 @@ open class NetworkAdapter {
         }
     }
 
-    open func fetchToken(_ requestModel: Buildable, completion: @escaping (TokenResponseObject) -> Void) {
-        network.fetch(requestModel) { result in
-            guard case let Result.success(data) = result
-            else { return }
-            let str = String(decoding: data, as: UTF8.self)
-            let tokenModel = TokenResponseObject(token: str)
-            completion(tokenModel)
-        }
-    }
-
     func buildModel<T: Decodable>(of _: T.Type, fromData data: Data) -> [T]? {
         do {
             let decoder = JSONDecoder()

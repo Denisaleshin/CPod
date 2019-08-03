@@ -8,7 +8,7 @@
 
 import Foundation
 
-let baseURLString = "https://api-cert.belavia.by"
+let baseURLString = "https://"
 
 public enum HTTPMethod: String {
     case GET
@@ -72,9 +72,6 @@ public extension Buildable {
 extension URLRequest {
     mutating func populate(contentType: ContentTypes, path _: String) {
         cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        if let token = AppSharedData.shared.authorisationToken {
-            setValue(("Bearer \(token)"), forHTTPHeaderField: HTTPHeaders.Authorization.rawValue)
-        }
         setValue(contentType.rawValue, forHTTPHeaderField: HTTPHeaders.ContentType.rawValue)
     }
 
