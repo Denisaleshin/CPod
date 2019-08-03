@@ -8,7 +8,6 @@
 
 import Foundation
 
-let baseURLString = "https://"
 
 public enum HTTPMethod: String {
     case GET
@@ -57,7 +56,7 @@ public extension Buildable {
 
     func build() -> URLRequest {
         // Building the Request object
-        let urlString = baseURLString + path
+        let urlString = path
         let url = URL(string: urlString)!
         var request = URLRequest(url: url)
         request.populate(contentType: contentType, path: path)
