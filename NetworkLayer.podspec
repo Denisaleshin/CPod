@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.name = "NetworkLayer"
   s.summary = "Lighweit list of classes for networking"
   s.requires_arc = true
-  s.version = "0.0.1"
+  s.version = "0.0.3"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "Denis Al" => "denis.aleshin@gismart.com" }
   s.homepage = "https://github.com/Denisaleshin/CPod"
